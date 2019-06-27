@@ -33,7 +33,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+            src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -44,7 +44,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+            src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
             alt="Third slide"
           />
 
@@ -56,7 +56,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+            src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
             alt="Third slide"
           />
 
@@ -82,7 +82,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="first">
                   <img
-                    src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+                    src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
                     alt="Third slide"
                     style={{width: '200px'}}
                   /> 2019
@@ -91,7 +91,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="second">
                   <img
-                      src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+                      src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
                       alt="Third slide"
                       style={{width: '200px'}}
                   /> 2018
