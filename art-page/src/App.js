@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import {Button, Navbar, Nav, Form, FormControl, Container} from "react-bootstrap";
 import Home from './Home.js';
 import StickyFooter from 'react-sticky-footer';
+import TextBox from './TextBox.js';
 
 class MyNavBar extends React.Component {
     render() {
@@ -11,6 +12,7 @@ class MyNavBar extends React.Component {
           <Navbar.Brand href="/home">PhiloSophie</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/digital">Digital</Nav.Link>
             <Nav.Link href="/traditional">Traditional</Nav.Link>
           </Nav>
@@ -54,12 +56,28 @@ function HomePage() {
   return <Home />;
 }
 
+function AboutPage() {
+  return (
+    <Container>
+      <TextBox title="About PhiloSophie" text="LMAO" />
+    </Container>
+  );
+}
+
 function DigitalPage() {
-  return <h2>TODO: Digital</h2>;
+  return (
+    <Container>
+      <TextBox title="Digital" text="LMAO" />
+    </Container>
+  );
 }
 
 function TraditionalPage() {
-  return <h2>TODO: Traditional</h2>;
+  return (
+    <Container>
+      <TextBox title="Traditional" text="LMAO" />
+    </Container>
+  );
 }
 
 function AppRouter() {
@@ -69,10 +87,9 @@ function AppRouter() {
         <MyNavBar />
         <Route path="/" exact component={HomePage} />
         <Route path="/home" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
         <Route path="/digital" component={DigitalPage} />
         <Route path="/traditional" component={TraditionalPage} />
-        <br></br>
-        <br></br>
         <br></br>
         <MyFooter />
       </div>

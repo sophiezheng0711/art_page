@@ -1,6 +1,9 @@
 import React from 'react';
 import {Carousel, Container, Tab, Row, Col, Nav} from 'react-bootstrap';
 import './App.css';
+import TextBox from './TextBox.js';
+import ImgPop from './ImagePopup.js';
+import artDict from './art.json';
 
 class ControlledCarousel extends React.Component {
   constructor(props, context) {
@@ -72,6 +75,39 @@ class ControlledCarousel extends React.Component {
   }
 }
 
+class GalleryByYear extends React.Component {
+  constructor(props) {
+    super(props);
+
+    var tempList = artDict.years;
+      tempList.forEach(element => {
+        if (element.id === this.props.year) {
+          this.artList = element.list;
+        }
+      });
+  }
+  render () {
+    return (
+      <div>
+        <Container>
+          <TextBox title={this.props.year + " Gallery"} text={this.props.text} />
+          {this.artList.map((value, index) => (
+            (((index + 1) % 3 === 0) ? 
+              <>
+                <ImgPop key={index} img={process.env.PUBLIC_URL + 'img/' + this.props.year + '/' + value} />
+                <br></br>
+                <br></br>
+              </>
+              :
+              <ImgPop key={index} img={process.env.PUBLIC_URL + 'img/' + this.props.year + '/' + value} />
+            )
+          ))}
+        </Container>
+      </div>
+    );
+  }
+}
+
 class TabBar extends React.Component {
   render () {
     return (
@@ -102,10 +138,10 @@ class TabBar extends React.Component {
           <Col sm={9}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
-                LMAO
+                <GalleryByYear year={2019} text="LMAO"/>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-                HAHA
+              <GalleryByYear year={2018} text="HAHA"/>
               </Tab.Pane>
             </Tab.Content>
           </Col>
