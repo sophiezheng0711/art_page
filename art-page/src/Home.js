@@ -41,21 +41,19 @@ class ControlledCarousel extends React.Component {
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h1 style={{fontFamily: 'Copperplate,"Copperplate Gothic Light",fantasy', fontSize: '72px', color: "rgba(0,0,0,.8)"}}>Welcome!</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/carousel/todoroki.jpeg'}
+            src={process.env.PUBLIC_URL + 'img/carousel/huh.jpg'}
             alt="Third slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1 style={{fontFamily: 'Copperplate,"Copperplate Gothic Light",fantasy', fontSize: '72px', color: "rgba(0,0,0,.8)"}}>Welcome!</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -67,10 +65,7 @@ class ControlledCarousel extends React.Component {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h1 style={{fontFamily: 'Copperplate,"Copperplate Gothic Light",fantasy', fontSize: '72px', color: "rgba(0,0,0,.8)"}}>Welcome!</h1>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -93,7 +88,7 @@ class GalleryByYear extends React.Component {
     return (
       <div>
         <Container>
-          <TextBox title={this.props.year + " Gallery"} text={this.props.text} />
+          <TextBox title={this.props.year + " Gallery"} text={this.props.text} button={true} />
           {this.artList.map((value, index) => (
             (((index + 1) % 3 === 0) ? 
               <>
@@ -139,7 +134,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="third">
                   <img
-                      src={process.env.PUBLIC_URL + 'img/buttons/ox.jpg'}
+                      src={process.env.PUBLIC_URL + 'img/buttons/cat.jpg'}
                       alt="Third slide"
                       style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2017
@@ -150,7 +145,9 @@ class TabBar extends React.Component {
           <Col sm={9}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
-                <GalleryByYear year={2019} text="LMAO"/>
+                <GalleryByYear year={2019} text="A year of final disappointments and low efforts, 
+                edge lords and clowns. It makes the creation of digital fan art both simple and
+                complicated."/>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
               <GalleryByYear year={2018} text="HAHA"/>
@@ -169,9 +166,7 @@ class TabBar extends React.Component {
 function App() {
   return (
     <div>
-      {/* <Container> */}
-        <ControlledCarousel />
-      {/* </Container> */}
+      <ControlledCarousel />
       <br></br>
       <Container>
         <TabBar />

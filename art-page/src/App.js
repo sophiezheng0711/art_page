@@ -59,7 +59,10 @@ function HomePage() {
 function AboutPage() {
   return (
     <Container>
-      <TextBox title="About PhiloSophie" text="LMAO" />
+      <TextBox title="About PhiloSophie" text="PhiloSophie is a self-taught artist specializing in 
+      traditional and digital art. This website was created entirely by PhiloSophie, and is based on 
+      create-react-app. PhiloSophie started attending oil painting lessons in 2016, and has kept 
+      art as an interest since then. How TF do I write a bio LMAO" button={false} />
     </Container>
   );
 }
@@ -67,7 +70,7 @@ function AboutPage() {
 function DigitalPage() {
   return (
     <Container>
-      <TextBox title="Digital" text="LMAO" />
+      <TextBox title="Digital" text="LMAO" button={false} />
     </Container>
   );
 }
@@ -75,7 +78,7 @@ function DigitalPage() {
 function TraditionalPage() {
   return (
     <Container>
-      <TextBox title="Traditional" text="LMAO" />
+      <TextBox title="Traditional" text="LMAO" button={false}/>
     </Container>
   );
 }
