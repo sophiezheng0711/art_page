@@ -1,105 +1,83 @@
-import React from 'react';
-import {Button, Navbar, Nav, Form, FormControl, Carousel, Container} from 'react-bootstrap';
-import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Button, Navbar, Nav, Form, FormControl, Container} from "react-bootstrap";
+import Home from './Home.js';
+import StickyFooter from 'react-sticky-footer';
 
 class MyNavBar extends React.Component {
-  render() {
-    return (
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">PhiloSophie</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Digital</Nav.Link>
-          <Nav.Link href="#pricing">Traditional</Nav.Link>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
-      </Navbar>
-    );
+    render() {
+      return (
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="/home">PhiloSophie</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/digital">Digital</Nav.Link>
+            <Nav.Link href="/traditional">Traditional</Nav.Link>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-info">Search</Button>
+          </Form>
+        </Navbar>
+      );
+    }
   }
+
+class MyFooter extends React.Component {
+    render() {
+        return (
+            <StickyFooter
+                bottomThreshold={50}
+                normalStyles={{
+                backgroundColor: "#464D59",
+                padding: "1rem"
+                }}
+                stickyStyles={{
+                backgroundColor: "rgba(255,255,255,.8)",
+                padding: "1rem"
+                }}
+            >
+                <Container>
+                    <div style={{color: "#B0B3B9", fontFamily: '"Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-seri'}}>
+                        <h4>Contact Me</h4>
+                        <div>Email: dummy@gmail.com</div>
+                        Amino: <a href='http://aminoapps.com/p/u9iut'>http://aminoapps.com/p/u9iut</a>
+                        <div>YouTube: dummy.u2be.com</div>
+                    </div>
+                </Container>
+            </StickyFooter>
+        );
+    }
 }
 
-class ControlledCarousel extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.handleSelect = this.handleSelect.bind(this);
-
-    this.state = {
-      index: 0,
-      direction: null,
-    };
-  }
-
-  handleSelect(selectedIndex, e) {
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction,
-    });
-  }
-
-  render() {
-    const { index, direction } = this.state;
-
-    return (
-      <Carousel
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-      >
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    );
-  }
+function HomePage() {
+  return <Home />;
 }
 
-function App() {
+function DigitalPage() {
+  return <h2>// TODO: Digital</h2>;
+}
+
+function TraditionalPage() {
+  return <h2>// TODO: Traditional</h2>;
+}
+
+function AppRouter() {
   return (
-    <div>
-      <MyNavBar />
-      <Container>
-        <ControlledCarousel />
-      </Container>
-    </div>
+    <Router>
+      <div>
+        <MyNavBar />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/digital" component={DigitalPage} />
+        <Route path="/traditional" component={TraditionalPage} />
+        <br></br>
+        <br></br>
+        <br></br>
+        <MyFooter />
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default AppRouter;
