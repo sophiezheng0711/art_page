@@ -80,10 +80,22 @@ class TabBar extends React.Component {
           <Col sm={3}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
-                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                <Nav.Link eventKey="first">
+                  <img
+                    src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+                    alt="Third slide"
+                    style={{width: '200px'}}
+                  /> 2019
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                <Nav.Link eventKey="second">
+                  <img
+                      src={process.env.PUBLIC_URL + 'img/chapter_7.jpg'}
+                      alt="Third slide"
+                      style={{width: '200px'}}
+                  /> 2018
+                </Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
