@@ -119,7 +119,7 @@ class TabBar extends React.Component {
                 <Nav.Link eventKey="first">
                   <img
                     src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
-                    alt="Third slide"
+                    alt="First slide"
                     style={{width: '200px'}}
                   /> 2019
                 </Nav.Link>
@@ -128,9 +128,18 @@ class TabBar extends React.Component {
                 <Nav.Link eventKey="second">
                   <img
                       src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
-                      alt="Third slide"
+                      alt="Second slide"
                       style={{width: '200px'}}
                   /> 2018
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="third">
+                  <img
+                      src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
+                      alt="Third slide"
+                      style={{width: '200px'}}
+                  /> 2017
                 </Nav.Link>
               </Nav.Item>
             </Nav>
@@ -142,6 +151,9 @@ class TabBar extends React.Component {
               </Tab.Pane>
               <Tab.Pane eventKey="second">
               <GalleryByYear year={2018} text="HAHA"/>
+              </Tab.Pane>
+              <Tab.Pane eventKey="third">
+              <GalleryByYear year={2017} text="OOP"/>
               </Tab.Pane>
             </Tab.Content>
           </Col>
