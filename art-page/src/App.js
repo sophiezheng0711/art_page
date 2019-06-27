@@ -39,7 +39,7 @@ class MyFooter extends React.Component {
             >
                 <Container>
                     <div style={{color: "#B0B3B9", fontFamily: '"Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-seri'}}>
-                        <h4>Contact Me</h4>
+                        <h4 style={{color: "#FFFFFF"}}>Contact Me</h4>
                         <div>Email: dummy@gmail.com</div>
                         Amino: <a href='http://aminoapps.com/p/u9iut'>http://aminoapps.com/p/u9iut</a>
                         <div>YouTube: dummy.u2be.com</div>
@@ -55,11 +55,11 @@ function HomePage() {
 }
 
 function DigitalPage() {
-  return <h2>// TODO: Digital</h2>;
+  return <h2>TODO: Digital</h2>;
 }
 
 function TraditionalPage() {
-  return <h2>// TODO: Traditional</h2>;
+  return <h2>TODO: Traditional</h2>;
 }
 
 function AppRouter() {
