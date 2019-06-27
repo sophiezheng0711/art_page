@@ -29,11 +29,11 @@ class MyFooter extends React.Component {
             <StickyFooter
                 bottomThreshold={50}
                 normalStyles={{
-                backgroundColor: "#464D59",
+                backgroundColor: "#343A47",
                 padding: "1rem"
                 }}
                 stickyStyles={{
-                backgroundColor: "rgba(255,255,255,.8)",
+                backgroundColor: "#6C7486",
                 padding: "1rem"
                 }}
             >
