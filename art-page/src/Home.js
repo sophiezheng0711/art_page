@@ -38,6 +38,7 @@ class ControlledCarousel extends React.Component {
             className="d-block w-100"
             src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
             alt="First slide"
+            style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
@@ -47,8 +48,9 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
+            src={process.env.PUBLIC_URL + 'img/carousel/todoroki.jpeg'}
             alt="Third slide"
+            style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
 
           <Carousel.Caption>
@@ -59,8 +61,9 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
+            src={process.env.PUBLIC_URL + 'img/carousel/got.jpg'}
             alt="Third slide"
+            style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
 
           <Carousel.Caption>
@@ -118,9 +121,9 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="first">
                   <img
-                    src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
+                    src={process.env.PUBLIC_URL + 'img/buttons/got.jpg'}
                     alt="First slide"
-                    style={{width: '200px'}}
+                    style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2019
                 </Nav.Link>
               </Nav.Item>
@@ -129,16 +132,16 @@ class TabBar extends React.Component {
                   <img
                       src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
                       alt="Second slide"
-                      style={{width: '200px'}}
+                      style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2018
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="third">
                   <img
-                      src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
+                      src={process.env.PUBLIC_URL + 'img/buttons/ox.jpg'}
                       alt="Third slide"
-                      style={{width: '200px'}}
+                      style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2017
                 </Nav.Link>
               </Nav.Item>
@@ -166,9 +169,9 @@ class TabBar extends React.Component {
 function App() {
   return (
     <div>
-      <Container>
+      {/* <Container> */}
         <ControlledCarousel />
-      </Container>
+      {/* </Container> */}
       <br></br>
       <Container>
         <TabBar />

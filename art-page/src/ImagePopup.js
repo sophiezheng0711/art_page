@@ -25,8 +25,8 @@ class App extends React.Component {
       render() {
         return (
           <>
-            <Button variant="outline-secondary" onClick={this.handleShow}>
-              <img src={this.props.img} style={{width: '200px'}} alt="" />
+            <Button size='lg' variant="outline-secondary" onClick={this.handleShow}>
+              <img src={this.props.img} style={{width: '200px', height: '200px', objectFit: 'cover'}} alt="" />
             </Button>
             <Modal show={this.state.show} onHide={this.handleClose} centered size='lg'>
               <Modal.Header closeButton>
