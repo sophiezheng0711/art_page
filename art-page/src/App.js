@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {HashRouter as Router, Route} from "react-router-dom";
 import {Button, Navbar, Nav, Form, FormControl, Container} from "react-bootstrap";
 import Home from './Home.js';
 import StickyFooter from 'react-sticky-footer';
@@ -9,12 +9,12 @@ class MyNavBar extends React.Component {
     render() {
       return (
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/home">PhiloSophie</Navbar.Brand>
+          <Navbar.Brand href="/art_page/#/home">PhiloSophie</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/digital">Digital</Nav.Link>
-            <Nav.Link href="/traditional">Traditional</Nav.Link>
+            <Nav.Link href="/art_page/#/home">Home</Nav.Link>
+            <Nav.Link href="/art_page/#/about">About</Nav.Link>
+            <Nav.Link href="/art_page/#/digital">Digital</Nav.Link>
+            <Nav.Link href="/art_page/#/traditional">Traditional</Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -62,7 +62,7 @@ function AboutPage() {
       <TextBox title="About PhiloSophie" text="PhiloSophie is a self-taught artist specializing in 
       traditional and digital art. This website was created entirely by PhiloSophie, and is based on 
       create-react-app. PhiloSophie started attending oil painting lessons in 2016, and has kept 
-      art as an interest since then. How TF do I write a bio LMAO" button={false} />
+      art as an interest since then. How TF do I write a bio LMAO" button='false' />
     </Container>
   );
 }
@@ -70,7 +70,7 @@ function AboutPage() {
 function DigitalPage() {
   return (
     <Container>
-      <TextBox title="Digital" text="LMAO" button={false} />
+      <TextBox title="Digital" text="LMAO" button='false' />
     </Container>
   );
 }
@@ -78,16 +78,16 @@ function DigitalPage() {
 function TraditionalPage() {
   return (
     <Container>
-      <TextBox title="Traditional" text="LMAO" button={false}/>
+      <TextBox title="Traditional" text="LMAO" button='false'/>
     </Container>
   );
 }
 
 function AppRouter() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
-        <MyNavBar />
+        <MyNavBar pathname="/art_page/#" />
         <Route path="/" exact component={HomePage} />
         <Route path="/home" component={HomePage} />
         <Route path="/about" component={AboutPage} />

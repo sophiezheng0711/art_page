@@ -36,7 +36,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/carousel/chapter_7.jpg'}
+            src={'./img/carousel/chapter_7.jpg'}
             alt="First slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
@@ -47,7 +47,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/carousel/huh.jpg'}
+            src={'./img/carousel/huh.jpg'}
             alt="Third slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
@@ -59,7 +59,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={process.env.PUBLIC_URL + 'img/carousel/got.jpg'}
+            src={'./img/carousel/got.jpg'}
             alt="Third slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
@@ -88,16 +88,16 @@ class GalleryByYear extends React.Component {
     return (
       <div>
         <Container>
-          <TextBox title={this.props.year + " Gallery"} text={this.props.text} button={true} />
+          <TextBox title={this.props.year + " Gallery"} text={this.props.text} button='true' />
           {this.artList.map((value, index) => (
             (((index + 1) % 3 === 0) ? 
               <>
-                <ImgPop key={index} img={process.env.PUBLIC_URL + 'img/' + this.props.year + '/' + value} />
+                <ImgPop key={index} img={'./img/' + this.props.year + '/' + value} />
                 <br></br>
                 <br></br>
               </>
               :
-              <ImgPop key={index} img={process.env.PUBLIC_URL + 'img/' + this.props.year + '/' + value} />
+              <ImgPop key={index} img={'./img/' + this.props.year + '/' + value} />
             )
           ))}
         </Container>
@@ -116,7 +116,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="first">
                   <img
-                    src={process.env.PUBLIC_URL + 'img/buttons/got.jpg'}
+                    src={'./img/buttons/got.jpg'}
                     alt="First slide"
                     style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2019
@@ -125,7 +125,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="second">
                   <img
-                      src={process.env.PUBLIC_URL + 'img/buttons/chapter_7.jpg'}
+                      src={'./img/buttons/chapter_7.jpg'}
                       alt="Second slide"
                       style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2018
@@ -134,7 +134,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="third">
                   <img
-                      src={process.env.PUBLIC_URL + 'img/buttons/cat.jpg'}
+                      src={'./img/buttons/cat.jpg'}
                       alt="Third slide"
                       style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2017

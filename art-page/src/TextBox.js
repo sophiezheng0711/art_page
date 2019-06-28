@@ -17,7 +17,7 @@ class App extends React.Component {
         );
         return (
             <Jumbotron fluid {...this.props}>
-                {(!this.props.button) ? 
+                {(this.props.button === "false") ? 
                 <Container>
                 <h1>{this.props.title}</h1>
                 <p>
