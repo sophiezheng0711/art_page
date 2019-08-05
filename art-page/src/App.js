@@ -13,8 +13,7 @@ class MyNavBar extends React.Component {
           <Nav className="mr-auto">
             <Nav.Link href="/art_page/#/home">Home</Nav.Link>
             <Nav.Link href="/art_page/#/about">About</Nav.Link>
-            <Nav.Link href="/art_page/#/digital">Digital</Nav.Link>
-            <Nav.Link href="/art_page/#/traditional">Traditional</Nav.Link>
+            <Nav.Link href="/art_page/#/games">Games</Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -67,18 +66,10 @@ function AboutPage() {
   );
 }
 
-function DigitalPage() {
+function GamesPage() {
   return (
     <Container>
-      <TextBox title="Digital" text="LMAO" button='false' />
-    </Container>
-  );
-}
-
-function TraditionalPage() {
-  return (
-    <Container>
-      <TextBox title="Traditional" text="LMAO" button='false'/>
+      <TextBox title="Games" text="LMAO" button='false' />
     </Container>
   );
 }
@@ -91,8 +82,7 @@ function AppRouter() {
         <Route path="/" exact component={HomePage} />
         <Route path="/home" component={HomePage} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/digital" component={DigitalPage} />
-        <Route path="/traditional" component={TraditionalPage} />
+        <Route path="/games" component={GamesPage} />
         <br></br>
         <MyFooter />
       </div>
