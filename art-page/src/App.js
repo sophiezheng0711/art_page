@@ -4,6 +4,7 @@ import {Button, Navbar, Nav, Form, FormControl, Container} from "react-bootstrap
 import Home from './Home.js';
 import StickyFooter from 'react-sticky-footer';
 import TextBox from './TextBox.js';
+import Games from './Games.js';
 
 class MyNavBar extends React.Component {
     render() {
@@ -68,9 +69,7 @@ function AboutPage() {
 
 function GamesPage() {
   return (
-    <Container>
-      <TextBox title="Games" text="LMAO" button='false' />
-    </Container>
+    <Games />
   );
 }
 
