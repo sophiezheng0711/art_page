@@ -62,7 +62,7 @@ function AboutPage() {
       <TextBox title="About PhiloSophie" text="PhiloSophie is a self-taught artist specializing in 
       traditional and digital art. This website was created entirely by PhiloSophie, and is based on 
       create-react-app. PhiloSophie started attending oil painting lessons in 2016, and has kept 
-      art as an interest since then. How TF do I write a bio LMAO" button='false' />
+      art as an interest since then." button='false' />
     </Container>
   );
 }

@@ -150,10 +150,10 @@ class TabBar extends React.Component {
                 complicated."/>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-              <GalleryByYear year={2018} text="HAHA"/>
+              <GalleryByYear year={2018} text="2018 collections"/>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
-              <GalleryByYear year={2017} text="OOP"/>
+              <GalleryByYear year={2017} text="2017 collections"/>
               </Tab.Pane>
             </Tab.Content>
           </Col>
