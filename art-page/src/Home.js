@@ -116,7 +116,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="first">
                   <img
-                    src={'./img/buttons/got.jpg'}
+                    src={'./img/buttons/rin.jpg'}
                     alt="First slide"
                     style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2019
@@ -125,17 +125,26 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="second">
                   <img
-                      src={'./img/buttons/chapter_7.jpg'}
-                      alt="Second slide"
-                      style={{width: '200px', height: '70px', objectFit: 'cover'}}
-                  /> 2018
+                    src={'./img/buttons/got.jpg'}
+                    alt="Second slide"
+                    style={{width: '200px', height: '70px', objectFit: 'cover'}}
+                  /> 2019
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="third">
                   <img
-                      src={'./img/buttons/cat.jpg'}
+                      src={'./img/buttons/chapter_7.jpg'}
                       alt="Third slide"
+                      style={{width: '200px', height: '70px', objectFit: 'cover'}}
+                  /> 2018
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="fourth">
+                  <img
+                      src={'./img/buttons/cat.jpg'}
+                      alt="Fourth slide"
                       style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2017
                 </Nav.Link>
@@ -144,18 +153,18 @@ class TabBar extends React.Component {
           </Col>
           <Col sm={9}>
             <Tab.Content>
-              <Tab.Pane eventKey="second">
+              <Tab.Pane eventKey="first">
                 <GalleryByYear year={2020} text="I am a graphic designer of a game :0000"/>
               </Tab.Pane>
-              <Tab.Pane eventKey="first">
+              <Tab.Pane eventKey="second">
                 <GalleryByYear year={2019} text="A year of final disappointments and low efforts, 
                 edge lords and clowns. It makes the creation of digital fan art both simple and
                 complicated."/>
               </Tab.Pane>
-              <Tab.Pane eventKey="second">
+              <Tab.Pane eventKey="third">
               <GalleryByYear year={2018} text="2018 collections"/>
               </Tab.Pane>
-              <Tab.Pane eventKey="third">
+              <Tab.Pane eventKey="fourth">
               <GalleryByYear year={2017} text="2017 collections"/>
               </Tab.Pane>
             </Tab.Content>
