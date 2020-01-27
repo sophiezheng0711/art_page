@@ -119,7 +119,7 @@ class TabBar extends React.Component {
                     src={'./img/buttons/rin.jpg'}
                     alt="First slide"
                     style={{width: '200px', height: '70px', objectFit: 'cover'}}
-                  /> 2019
+                  /> 2020
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
