@@ -144,6 +144,9 @@ class TabBar extends React.Component {
           </Col>
           <Col sm={9}>
             <Tab.Content>
+              <Tab.Pane eventKey="second">
+                <GalleryByYear year={2020} text="I am a graphic designer of a game :0000"/>
+              </Tab.Pane>
               <Tab.Pane eventKey="first">
                 <GalleryByYear year={2019} text="A year of final disappointments and low efforts, 
                 edge lords and clowns. It makes the creation of digital fan art both simple and
