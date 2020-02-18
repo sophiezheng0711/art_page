@@ -47,7 +47,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={'./img/carousel/huh.jpg'}
+            src={'./img/carousel/gilkidu.jpg'}
             alt="Third slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
@@ -116,7 +116,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="first">
                   <img
-                    src={'./img/buttons/rin.jpg'}
+                    src={'./img/buttons/gilkidu.jpg'}
                     alt="First slide"
                     style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2020
