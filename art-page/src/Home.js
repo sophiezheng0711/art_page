@@ -36,7 +36,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={'./img/carousel/chapter_7.jpg'}
+            src={'./img/carousel/yukina.jpg'}
             alt="First slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
@@ -47,7 +47,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={'./img/carousel/gilkidu.jpg'}
+            src={'./img/carousel/revlink.jpg'}
             alt="Third slide"
             style={{width: '700px', height: '400px', objectFit: 'cover'}}
           />
@@ -125,7 +125,7 @@ class TabBar extends React.Component {
               <Nav.Item>
                 <Nav.Link eventKey="second">
                   <img
-                    src={'./img/buttons/gilkidu.jpg'}
+                    src={'./img/buttons/revlink.jpg'}
                     alt="Second slide"
                     style={{width: '200px', height: '70px', objectFit: 'cover'}}
                   /> 2020
